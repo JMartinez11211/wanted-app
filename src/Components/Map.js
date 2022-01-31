@@ -46,11 +46,11 @@ map.on('click', (event) => {
     Create a popup, specify its options 
     and properties, and add it to the map.
   */
-const popup = new mapboxgl.Popup({ offset: [0, ] })
+const popup = new mapboxgl.Popup({ offset: [1 ] })
 .setLngLat(feature.geometry.coordinates)
 .setHTML(
-  `<img src=${feature.properties.img}><h3>${feature.properties.place_name}</h3>
-  <p>${feature.properties.number}</p> <p>${feature.properties.info}</p>`
+  `<div class="mapCard" ><img class= "mapImage" src=${feature.properties.img}><div class="mapText"><h3>${feature.properties.place_name}</h3>
+  <p>${feature.properties.number}</p> <p>${feature.properties.info}</p></div></div>`
 )
 .addTo(map);
 
@@ -62,6 +62,7 @@ const popup = new mapboxgl.Popup({ offset: [0, ] })
 
     return(
         <div>
+          <h3>Field office Map, click on an icon to see office info.</h3>
       <div className="sidebarStyle">
         <div>
           Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
