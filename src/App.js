@@ -13,6 +13,7 @@ function App() {
       <Header/>
       <Routes>
         <Route path="/" element={<Data2/>}/>
+        <Route path="wanted-app" element={<Data2/>}/>
         <Route path="home"  element={<Data2/>}/>
         <Route path="Field_Offices" element={<Map/>}/>
         <Route path="about" element={<About/>}/>
